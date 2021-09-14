@@ -4,6 +4,8 @@ Rails.application.configure do
   
   config.hosts << "77e42215b6c54548bea831557ffb991f.vfs.cloud9.us-east-2.amazonaws.com"
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.default_url_options = { host: 'https://77e42215b6c54548bea831557ffb991f.vfs.cloud9.us-east-2.amazonaws.com', port: 3000 }
+
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development

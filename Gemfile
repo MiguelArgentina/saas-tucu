@@ -52,3 +52,6 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'devise'
+gem 'rails-ujs'
+gem 'jquery-rails'
