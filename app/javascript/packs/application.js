@@ -13,8 +13,6 @@ import "bootstrap/dist/css/bootstrap";
 
 import "@fortawesome/fontawesome-free/css/all"
 
-global.toastr = require("toastr")
-
 import "../stylesheets/application"
 
 // Uncomment to copy all static images under ../images to the output folder and reference
