@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-2">
   <a class="navbar-brand" href="/">
     Navbar
   </a>
@@ -7,15 +7,25 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="container-fluid d-block d-md-flex justify-content-between">
+            
       <% if current_user %>
         
           <ul class="navbar-nav mr-auto">
-            <li class="<%= 'active font-weight-bold' if current_page?(root_path) %> nav-item">
+            <li class="<%= 'active fw-bold' if current_page?(root_path) %> nav-item">
               <%= link_to root_path, class: 'nav-link' do %>
-                <div class="fa fa-home"></div>
-                Home
+                <div class="fa fa-home <%= 'text-white' if current_page?(root_path) %>"></div>
+               <span class="<%= 'text-white' if current_page?(root_path) %>">
+              Home</span>
               <% end %>
             </li>
+
+            <li class="<%= 'active fw-bold' if current_page?(users_path) %> nav-item">
+          <%= link_to users_path, class: 'nav-link' do %>
+            <div class="fa fa-users <%= 'text-white' if current_page?(users_path) %>"></div>
+            <span class="<%= 'text-white' if current_page?(users_path) %>">
+              Users</span>
+          <% end %>
+        </li>
           </ul>
           <ul class="navbar-nav mr-right">
             <li class="nav-item dropdown">
