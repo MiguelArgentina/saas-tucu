@@ -1,3 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tenants</h1>
+
+<br>
+
+
 <h3>
   <div class="text-center">
     <%= controller_name.humanize + ":" %>
@@ -6,28 +13,25 @@
     </div>
   </div>
 </h3>
-
-<br>
-
 <table class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
       <th>id</th>
-      <th>email</th>
-      <th>tenants</th>
+      <th>name</th>
+      <th>users</th>
     </tr>
   </thead>
   <tbody>
-    <% @users.each do |user| %>
+    <% @tenants.each do |tenant| %>
       <tr>
         <td>
-          <%= link_to user.id, user %>
+          <%= link_to tenant.id, tenant %>
         </td>
         <td>
-          <%= user.email %>
+          <%= tenant.name %>
         </td>
         <td>
-          <%= user.tenants.compact.join(', ') %>
+          <%= tenant.users.compact.join(', ') %>
         </td>
       </tr>
     <% end %>

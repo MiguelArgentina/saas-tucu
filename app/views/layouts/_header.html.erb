@@ -26,6 +26,36 @@
               Users</span>
           <% end %>
         </li>
+        
+             <li class="<%= 'active fw-bold' if current_page?(tenants_path) %> nav-item">
+          <%= link_to tenants_path, class: 'nav-link' do %>
+            <div class="fas fa-user-shield <%= 'text-white' if current_page?(tenants_path) %>"></div>
+            <span class="<%= 'text-white' if current_page?(tenants_path) %>">
+              Tenants</span>
+          <% end %>
+        </li>
+             <li class="<%= 'active fw-bold' if current_page?(new_tenant_path) %> nav-item">
+          <%= link_to new_tenant_path, class: 'nav-link' do %>
+            <div class="fas fa-user-plus <%= 'text-white' if current_page?(new_tenant_path) %>"></div>
+            <span class="<%= 'text-white' if current_page?(new_tenant_path) %>">
+              New tenant</span>
+          <% end %>
+        </li>
+        <li class="<%= 'active fw-bold' if current_page?(my_tenants_path) %> nav-item">
+          <%= link_to my_tenants_path, class: 'nav-link' do %>
+            <div class="fas fa-file-import <%= 'text-white' if current_page?(my_tenants_path) %>"></div>
+            <span class="<%= 'text-white' if current_page?(my_tenants_path) %>">
+              My tenants</span>
+          <% end %>
+        </li>
+        <li class="<%= 'active fw-bold' if current_page?(members_path) %> nav-item">
+          <%= link_to members_path, class: 'nav-link' do %>
+            <div class="fas fa-user-friends <%= 'text-white' if current_page?(members_path) %>"></div>
+            <span class="<%= 'text-white' if current_page?(members_path) %>">
+              Members</span>
+          <% end %>
+        </li>
+        
           </ul>
           <ul class="navbar-nav mr-right">
             <li class="nav-item dropdown">

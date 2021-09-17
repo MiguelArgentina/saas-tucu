@@ -55,3 +55,5 @@ end
 gem 'devise'
 gem 'rails-ujs'
 gem 'jquery-rails'
+gem 'simple_form'
+gem 'devise_invitable', '~> 2.0.0'

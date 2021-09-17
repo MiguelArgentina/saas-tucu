@@ -85,6 +85,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise_invitable (2.0.5)
+      actionmailer (>= 5.0)
+      devise (>= 4.6)
     erubi (1.10.0)
     ffi (1.15.4)
     globalid (0.5.2)
@@ -177,6 +180,9 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     spring (3.0.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -223,6 +229,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  devise_invitable (~> 2.0.0)
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
@@ -233,6 +240,7 @@ DEPENDENCIES
   rails-ujs
   sass-rails (>= 6)
   selenium-webdriver
+  simple_form
   spring
   turbolinks (~> 5)
   web-console (>= 4.1.0)
