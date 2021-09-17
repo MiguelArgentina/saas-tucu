@@ -11,7 +11,20 @@
 
 
 <br>
+<hr>
 
+<%=  form_tag invite_members_path, method: :get do %>
+  <%= email_field_tag "email", '', class: 'border border-muted ps-1', :placeholder => 'email@example.com' %>
+  <%= submit_tag "Invite tenant", class: 'btn btn-light border border-info' ,data: { confirm: "Send email?" } %>
+  <% %>
+  <% %>
+  <% %>
+<% end %>
+  
+
+
+<hr>
+<br>
 
 <h3>
   <div class="text-center">
