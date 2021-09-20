@@ -22,7 +22,7 @@ class MembersController < ApplicationController
     
      return
     else
-      user_to_invite = User.invite!(email: email)
+      user_to_invite = User.invite!({ email: email }, current_user)
       Member.create!(user: user_to_invite, tenant: current_tenant)
       redirect_to members_path, notice: "User #{email} was invited to #{current_tenant} from #{current_user}"
     end
