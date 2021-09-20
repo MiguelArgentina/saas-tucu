@@ -15,6 +15,8 @@
       <th>id</th>
       <th>email</th>
       <th>tenants</th>
+      <th>Invited by email</th>
+      <th>accepted invite</th>
     </tr>
   </thead>
   <tbody>
@@ -28,6 +30,26 @@
         </td>
         <td>
           <%= user.tenants.compact.join(', ') %>
+        </td>
+         <td>
+           <% if user.created_by_invite? %>
+           <span class="badge bg-primary">
+              <%= user.invitation_sent_at.to_formatted_s(:long) %>
+              </span>
+            <% else  %>
+            <span class="badge bg-info">
+              <%= "No"  %>
+              </span>
+            <% end  %>
+        </td>
+         <td>
+           <% if user.invitation_accepted_at.present? %>
+           <span class="badge bg-success">
+              <%= user.invitation_accepted_at.to_formatted_s(:long) %>
+              </span>
+            <% elsif user.invitation_sent_at.present?  %>
+              <%= link_to 'Resend', resend_invite_user_path(user), method: :patch, class: "badge bg-info resend" %>
+            <% end  %>
         </td>
       </tr>
     <% end %>

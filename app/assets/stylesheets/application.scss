@@ -1,2 +1,12 @@
 @import "bootstrap/dist/css/bootstrap";
 body { background: #f8f0e6; } 
+
+.resend {
+  text-decoration: none;
+}
+  .resend:hover {
+    background-color: #228854 !important;
+    color: white;
+  }
+
+
